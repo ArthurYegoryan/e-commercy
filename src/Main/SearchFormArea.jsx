@@ -3,12 +3,10 @@ import ButtonComponent from "../Buttons/ButtonComponent";
 
 const SearchFormArea = () => {
     return (
-        <div>
+        <div className="search-name-area">
             <form action="" className="search-form">
-                <img src="" alt="search-image" />
-                <input type="text" placeholder="What do you want to find?" />
-                <ButtonComponent label="Search" />
-                {/* <button>Search</button> */}
+                <input type="text" placeholder="What do you want to find?" className="search-text" />
+                <ButtonComponent label="Search" className={"search-button"} />
             </form>
         </div>
     );
