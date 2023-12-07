@@ -1,0 +1,11 @@
+header {
+    display: flex;
+}
+
+.logo {
+    width: 10%;
+}
+
+.company-name-div {
+    margin: auto;
+}
