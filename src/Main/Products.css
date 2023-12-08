@@ -1,0 +1,51 @@
+.products-section {
+    display: grid;
+    padding: 2% 15%;
+    grid-template-columns: 30% 30% 30%;
+    row-gap: 1%;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 70%;
+}
+
+.product {
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.product-image-area {
+    max-width: 60%;
+    padding: 10%;
+    margin: auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-title {
+    text-align: center;
+    height: 20%;
+}
+
+.product-count-basket {
+    display: flex;
+    justify-content: space-between;
+    padding: 20%;
+}
+
+.basket-button {
+    width: 40px;
+}
+
+.basket-button > img {
+    width: 100%;
+}
+
+.product-price-count {
+    display: flex;
+    padding: 0 30%;
+    justify-content: space-between;
+}
