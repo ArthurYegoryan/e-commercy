@@ -1,0 +1,35 @@
+.basket-product-interface {
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.basket-image-area {
+    max-width: 60%;
+    padding: 10%;
+    margin: auto;
+    height: 35%;
+}
+
+.basket-product-image {
+    width: 100%;
+}
+
+.basket-product-info {
+    text-align: center;
+    font-size: 12px;
+}
+
+.basket-product-title {
+    text-align: center;
+    height: 20%;
+}
+
+.basket-select-count-buy {
+    display: flex;
+    padding: 5px;
+}
+
+.basket-input-count {
+    width: 40%;
+}

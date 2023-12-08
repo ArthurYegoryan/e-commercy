@@ -7,7 +7,10 @@ const ProductComponent = ({
     image,
     price,
     count,
-    rate
+    rate,
+    basketData,
+    setBasketData,
+    data
 }) => {
     return (
         <div className={`product product-${className}`}>
@@ -16,7 +19,11 @@ const ProductComponent = ({
             <ProductInfo title={title}
                          price={price}
                          rate={rate}
-                         count={count} />
+                         count={count}
+                         basketData={basketData}
+                         setBasketData={setBasketData}
+                         data={data}
+                         className={className} />
         </div>
     );
 };

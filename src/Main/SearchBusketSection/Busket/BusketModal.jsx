@@ -1,8 +1,9 @@
 import { useState } from "react";
 import BusketButton from "./BusketButton";
 import "./BusketModal.css";
+import BasketProductComponent from "./BasketProductComponent";
 
-const BusketModal = () => {
+const BusketModal = ({ basketData, setBasketData }) => {
     const [ modal, setModal ] = useState(false);
 
     const openCloseModal = () => {
@@ -16,10 +17,22 @@ const BusketModal = () => {
                 <div className="modal">
                     <div onClick={openCloseModal} className="overlay"></div>
                     <div className="modal-content">
-                        <h2>Hello Modal</h2>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti deleniti, maxime laudantium at similique quo doloremque eaque possimus quos eius explicabo iure saepe mollitia ex. Voluptates, magni. Aliquam, iusto? Reprehenderit facere explicabo minima excepturi tempore adipisci? Tempore illum qui ullam! Enim, magnam? Tempora explicabo blanditiis mollitia dignissimos, possimus maiores.
-                        </p>
+                        <h2>Basket</h2>
+                        <div className="basket-products">
+                            {
+                                basketData.length && basketData.map((product) => <BasketProductComponent key={product.id + Math.random()} 
+                                                                                      className={product.id} 
+                                                                                      title={product.title}
+                                                                                      image={product.image}
+                                                                                      price={product.price}
+                                                                                      count={product.rating.count}
+                                                                                      rate={product.rating.rate}
+                                                                                      basketData={basketData}
+                                                                                      setBasketData={setBasketData}
+                                                                                      data={basketData}
+                                                                />)
+                            }
+                        </div>
                         <button onClick={openCloseModal} className="close-modal-button">Close</button>
                     </div>
                 </div>

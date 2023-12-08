@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ProductComponent from "./ProductComponent";
 import "./Products.css";
 
-const ProoductsSection = () => {
+const ProoductsSection = ({ basketData, setBasketData }) => {
     const [ data, setData ] = useState(null);
 
     useEffect(() => {
@@ -13,16 +13,20 @@ const ProoductsSection = () => {
         }
 
         fetchData();
-    }, []);
+    }, []);    
 
     return (
         <section className="products-section">
-            {data && data.map((product) => <ProductComponent className={product.id} 
+            {data && data.map((product) => <ProductComponent key={product.id} 
+                                                             className={product.id} 
                                                              title={product.title}
                                                              image={product.image}
                                                              price={product.price}
                                                              count={product.rating.count}
                                                              rate={product.rating.rate}
+                                                             basketData={basketData}
+                                                             setBasketData={setBasketData}
+                                                             data={data}
                                             />)}
         </section>
     );

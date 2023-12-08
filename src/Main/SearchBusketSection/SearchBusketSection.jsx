@@ -2,11 +2,12 @@ import SearchFormArea from "./SearchForm/SearchFormArea";
 import "./SearchBusketSection.css";
 import BusketModal from "./Busket/BusketModal";
 
-const SearchBusketSection = () => {
+const SearchBusketSection = ({ basketData, setBasketData }) => {
     return (
         <section className="search-busket-section">
             <SearchFormArea />
-            <BusketModal />
+            <BusketModal basketData={basketData}
+                         setBasketData={setBasketData} />
         </section>
     );
 };
