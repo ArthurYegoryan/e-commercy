@@ -1,4 +1,5 @@
-import buscetImage from "../img/cart.webp";
+import ProductImageArea from "./ProductImageArea";
+import ProductInfo from "./ProductInfo";
 
 const ProductComponent = ({
     className,
@@ -10,24 +11,12 @@ const ProductComponent = ({
 }) => {
     return (
         <div className={`product product-${className}`}>
-            <div className="product-image-area">
-                <img src={image} alt={`product-${className}`} className="product-image" />
-            </div>            
-            <div className="product-info">
-                <div className="product-title-area">
-                    <p className="product-title">{title}</p>
-                </div>
-                <div className="product-price-count">
-                    <p className="product-price">{price}$</p>
-                    <p className="product-rate">{rate}/5</p>
-                </div>
-                <div className="product-count-basket">
-                    <p className="product-count">Count: {count}</p>
-                    <button className="basket-button">
-                        <img src={buscetImage} alt="basket" />
-                    </button>
-                </div>
-            </div>
+            <ProductImageArea image={image} 
+                              className={className} />           
+            <ProductInfo title={title}
+                         price={price}
+                         rate={rate}
+                         count={count} />
         </div>
     );
 };
