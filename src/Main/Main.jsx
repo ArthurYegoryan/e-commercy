@@ -1,10 +1,10 @@
-import SearchFormArea from "./SearchFormArea";
-import ProoductsSection from "./ProductsSection";
+import ProoductsSection from "./ProductsSection/ProductsSection";
+import SearchBusketSection from "./SearchBusketSection/SearchBusketSection";
 
 const Main = () => {
     return (
         <main>
-            <SearchFormArea />
+            <SearchBusketSection />
             <ProoductsSection />
         </main>
     );

@@ -1,4 +1,4 @@
-import buscetImage from "./img/cart.webp";
+import buscetImage from "../img/cart.webp";
 
 const ProductComponent = ({
     className,

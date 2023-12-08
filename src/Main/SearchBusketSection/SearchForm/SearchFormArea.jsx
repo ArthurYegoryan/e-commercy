@@ -1,5 +1,5 @@
 import "./SearchForm.css";
-import ButtonComponent from "../Buttons/ButtonComponent";
+import ButtonComponent from "../../../Buttons/ButtonComponent";
 
 const SearchFormArea = () => {
     return (

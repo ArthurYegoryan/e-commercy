@@ -1,0 +1,5 @@
+.search-busket-section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px;
+}

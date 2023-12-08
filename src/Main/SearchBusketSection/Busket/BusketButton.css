@@ -1,0 +1,17 @@
+.busket-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+.busket-button:hover {
+    opacity: 0.8;
+}
+.busket-button:active {
+    opacity: 1;
+}
+
+.busket-button > img {
+    width: 100%;
+}
