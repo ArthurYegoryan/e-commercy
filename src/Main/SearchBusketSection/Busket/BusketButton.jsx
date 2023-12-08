@@ -1,9 +1,9 @@
 import busketImage from "../../img/basket.webp";
 import "./BusketButton.css";
 
-const BusketButton = () => {
+const BusketButton = ({ onClickHandler }) => {
     return (
-        <button className="busket-button">
+        <button onClick={onClickHandler} className="busket-button">
             <img src={busketImage} alt="busket" />
         </button>
     );
