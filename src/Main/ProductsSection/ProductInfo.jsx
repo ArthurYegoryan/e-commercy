@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ProductCountBasket from "./ProductCountBasket";
 import ProductPriceRate from "./ProductPriceRate";
 import ProductTitleArea from "./ProductTitleArea";
@@ -13,8 +12,6 @@ const ProductInfo = ({ title,
                        className
                     }) => {
 
-    const [ isBasketEmpty, setIsBasketEmpty ] = useState(true);
-
     return (
         <div className="product-info">
             <ProductTitleArea title={title} />
@@ -23,9 +20,7 @@ const ProductInfo = ({ title,
                                 basketData={basketData}
                                 setBasketData={setBasketData}
                                 data={data}
-                                className={className}
-                                isBasketEmpty={isBasketEmpty}
-                                setIsBasketEmpty={setIsBasketEmpty} />
+                                className={className} />
         </div>
     );
 };

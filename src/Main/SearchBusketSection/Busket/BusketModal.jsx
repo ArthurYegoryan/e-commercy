@@ -20,16 +20,17 @@ const BusketModal = ({ basketData, setBasketData }) => {
                         <h2>Basket</h2>
                         <div className="basket-products">
                             {
-                                basketData.length && basketData.map((product) => <BasketProductComponent key={product.id + Math.random()} 
-                                                                                      className={product.id} 
-                                                                                      title={product.title}
-                                                                                      image={product.image}
-                                                                                      price={product.price}
-                                                                                      count={product.rating.count}
-                                                                                      rate={product.rating.rate}
-                                                                                      basketData={basketData}
-                                                                                      setBasketData={setBasketData}
-                                                                                      data={basketData}
+                                basketData && basketData.map((product) => <BasketProductComponent 
+                                                                                    key={product.id + Math.random()} 
+                                                                                    className={product.id} 
+                                                                                    title={product.title}
+                                                                                    image={product.image}
+                                                                                    price={product.price}
+                                                                                    count={product.rating.count}
+                                                                                    rate={product.rating.rate}
+                                                                                    basketData={basketData}
+                                                                                    setBasketData={setBasketData}
+                                                                                    data={basketData}
                                                                 />)
                             }
                         </div>

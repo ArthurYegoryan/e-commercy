@@ -6,6 +6,11 @@ header {
     width: 10%;
 }
 
+.logo > img {
+    width: 100%;
+}
+
 .company-name-div {
     margin: auto;
+    font-size: 35px;
 }

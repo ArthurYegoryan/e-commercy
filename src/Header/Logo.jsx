@@ -1,7 +1,9 @@
+import logoImage from "../img/logo.webp";
+
 const Logo = () => {
     return (
         <div className="logo">
-            <img src="" alt="logo" />
+            <img src={logoImage} alt="logo" />
         </div>
     );
 };
