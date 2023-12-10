@@ -10,6 +10,8 @@ const BusketModal = ({ basketData, setBasketData }) => {
         setModal(!modal);
     };
 
+    const existingProdctsKeys = [];
+
     return (
         <>
             <BusketButton onClickHandler={openCloseModal}/>
@@ -20,18 +22,21 @@ const BusketModal = ({ basketData, setBasketData }) => {
                         <h2>Basket</h2>
                         <div className="basket-products">
                             {
-                                basketData && basketData.map((product) => <BasketProductComponent 
-                                                                                    key={product.id + Math.random()} 
-                                                                                    className={product.id} 
-                                                                                    title={product.title}
-                                                                                    image={product.image}
-                                                                                    price={product.price}
-                                                                                    count={product.rating.count}
-                                                                                    rate={product.rating.rate}
-                                                                                    basketData={basketData}
-                                                                                    setBasketData={setBasketData}
-                                                                                    data={basketData}
-                                                                />)
+                                basketData && basketData.map((product) => {
+                                    return !existingProdctsKeys.includes(product.id) && 
+                                            existingProdctsKeys.push(product.id) &&
+                                            <BasketProductComponent
+                                                key={product.id} 
+                                                className={product.id} 
+                                                title={product.title}
+                                                image={product.image}
+                                                price={product.price}
+                                                count={product.rating.count}
+                                                rate={product.rating.rate}
+                                                basketData={basketData}
+                                                setBasketData={setBasketData}
+                                            />
+                                })
                             }
                         </div>
                         <button onClick={openCloseModal} className="close-modal-button">Close</button>

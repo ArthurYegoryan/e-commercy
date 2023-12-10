@@ -1,4 +1,4 @@
-import buscetImage from "../img/cart.webp";
+import basketImage from "../img/cart.webp";
 
 const ProductCountBasket = ({ count, 
                               basketData, 
@@ -11,12 +11,12 @@ const ProductCountBasket = ({ count,
         <div className="product-count-basket">
             <p className="product-count">Count: {count}</p>
             <button onClick={() => {
-                setBasketData(
+                setBasketData([
                     ...basketData,
-                    data.filter((product) => product.id === className)
-                );
+                    ...data.filter((product) => product.id === className)
+                ]);
             }} className="basket-button">
-                <img src={buscetImage} alt="basket" />
+                <img src={basketImage} alt="basket" />
             </button>
         </div>
     );
